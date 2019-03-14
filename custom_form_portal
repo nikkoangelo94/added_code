@@ -1,0 +1,59 @@
+$('.custom_btn').click(function(){
+    $('.candidacy_content').slideUp();
+    $('.candidacy_form').slideDown();
+    
+});
+setInterval(function(){ 
+    $('.candidacy_form .form-input-custom0 input[type="checkbox"]').click(function(){
+            if($(this).prop("checked") == true){
+                $('.candidacy_form .form-input-custom1').slideDown();
+                $('.candidacy_form .form-input-custom2').slideDown();
+            }
+    });
+    $('.candidacy_form .form-input-custom2 .custom2__label-input-container input').change(function(){
+        if( $(this).is(":checked") ){ // check if the radio is checked
+            $('.candidacy_form .form-input-custom3').slideDown();
+            $('.candidacy_form .form-input-custom4').slideDown();
+        }
+    });
+    $('.candidacy_form .form-input-custom4 input[type="checkbox"]').click(function(){
+        if($(this).prop("checked") == true){
+            $('.candidacy_form .form-input-custom5').slideDown();
+            $('.candidacy_form .form-input-custom6').slideDown();
+        }
+    });
+    $('.candidacy_form .form-input-custom6 input[type="checkbox"]').click(function(){
+        if($(this).prop("checked") == true){
+            $('.candidacy_form .form-input-custom7').slideDown();
+            $('.candidacy_form .form-input-custom8').slideDown();
+        }
+    });
+    $('.candidacy_form .form-input-custom8 input[type="checkbox"]').click(function(){
+        if($(this).prop("checked") == true){
+            $('.candidacy_form .form-input-custom9').slideDown();
+            $('.candidacy_form .form-input-custom10').slideDown();
+        }
+    });
+    $('.candidacy_form .form-input-custom10 input[type="checkbox"]').click(function(){
+        if($(this).prop("checked") == true){
+            $('.candidacy_form .form-input-custom11').slideDown();
+            $('.candidacy_form .form-input-custom12').slideDown();
+        }
+    });
+    $('.candidacy_form .form-input-custom12 input[type="checkbox"]').click(function(){
+        if($(this).prop("checked") == true){
+            $('.candidacy_form .form-input-custom13').slideDown();
+            $('.candidacy_form .form-input-custom14').slideDown();
+        }
+    });
+    $('.candidacy_form .form-input-custom14 .custom14__label-input-container input').change(function(){
+        if( $(this).is(":checked") ){ // check if the radio is checked
+            $('.candidacy_form .form-input-custom15').slideDown();
+            $('.candidacy_form .form-input-custom16').slideDown();
+            $('.candidacy_form .leadFormInfo').slideDown();
+            $('.candidacy_form .form-wrap__submit').slideDown();
+        }
+    });
+}, 500);
+
+http://tlccoralgables.com/lasik-candidacy-test - sample code
