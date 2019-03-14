@@ -1,0 +1,12 @@
+var lead_suc = $('#predictive_checklist .leadFormSuccess').length;
+    if(lead_suc == 1){
+        if(isshow >= 0 && isshow <= 19){
+            $('#predictive_checklist .leadFormSuccess').text("Please contact our office to schedule your comprehensive eye health exam today.");
+            
+        }
+        else if(isshow >= 20 && isshow <= 24){
+            $('#predictive_checklist .leadFormSuccess').text("Your score indicates you may be a candidate for Vision Therapy. Please contact our office to schedule your comprehensive eye health exam with Dr. Rolfstad today.");
+        }
+        else if(isshow >= 25){
+            $('#predictive_checklist .leadFormSuccess').text("Your score indicates Vision Therapy is likely in your future. Please contact our office to schedule your comprehensive eye health exam with Dr. Rolfstad today.");
+        }
