@@ -1,0 +1,13 @@
+  var isshow = localStorage.getItem('isshow');
+   console.log(isshow);
+    if (isshow== null) {
+        localStorage.setItem('isshow', 1);
+        $('#tclose').trigger('click');        
+   console.log(isshow);
+    }
+    if (isshow != null)
+    {
+    	$('#tpopup').css('display','none');
+    }
+
+   
