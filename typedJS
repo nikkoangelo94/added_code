@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Typed JS</title>
+	<link rel="stylesheet" type="text/css" href="include/css/custom.css">
+
+</head>
+<body>
+	<div class="container">
+   <h1>I created a </h1>
+   <h1 class="typed"></h1>
+</div>
+<script type="text/javascript" src="include/js/custom.js"></script>
+</body>
+</html>
+
+
+<!-- CSS -->
+body{
+   font-family: sans-serif;
+   color: #fff;
+   background: linear-gradient(to right, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.8) 100%), url('https://images.pexels.com/photos/872957/pexels-photo-872957.jpeg?cs=srgb&dl=businessman-collaborate-collaboration-872957.jpg&fm=jpg') no-repeat;
+   background-size: cover;
+}
+.container{
+   width: 100%;
+   max-width: 800px;
+   margin: 50px auto;
+   padding: 50px 20px;
+   display: flex;
+}
+.container h1{
+   text-transform: uppercase;
+}
+.typed{
+   margin-left: 10px;
+   position: relative;
+   transition: 0.4s ease;
+}
+.typed::after{
+   content: "";
+   position: absolute;
+   width: 1px;
+   height: 90%;
+   border-right: 2px solid #fff;
+   animation: typing 0.8s infinite ease;
+}
+@keyframes typing {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+
+<!-- Script -->
+
+let count = 0;
+let index = 0;
+let back = 0;
+let currentText = '';
+let letter = '';
+let backIndicator = 0;
+
+(function type(){
+   const texts = ['typed javascript', 'website', 'script'];
+   
+   //setting the array to 0 for infinited typed effect
+   if(count === texts.length){
+      count = 0;
+   }
+   currentText = texts[count];
+   let currentTextLength = currentText.length;
+   if(backIndicator == 0){
+      if(index < currentTextLength){
+         added();
+         index++;
+      }
+      else if(index === currentTextLength){
+         added();
+         backIndicator++;
+      }
+   }
+   else if(backIndicator == 1){
+      if(index > 0){
+         added();
+         index--;
+      }
+      else if(index == 0){
+         count++;
+         backIndicator = 0;
+      }
+   }
+   function added(){
+      letter = currentText.slice(0, index);
+      document.querySelector('.typed').textContent = letter;
+   }
+
+   setTimeout(type, 300);
+})();
